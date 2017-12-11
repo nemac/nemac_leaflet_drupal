@@ -94,8 +94,21 @@
   };
 
   Drupal.nemac_leaflet.prototype.addDataToMap = function (data, self) {
+    console.log(data)
+    var dataLayer = L.geoJson(data, {
 
-    var dataLayer = L.geoJson(data);
+      //add popup for feature
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.field_destination && feature.properties.field_building_name) {
+          var PopupText = [];
+          PopupText.push("<b><br/>Building page </b> <a href=" + feature.properties.field_destination + '>' + feature.properties.field_building_name + '</a>');
+          layer.bindPopup("<p>" + PopupText.join("") + "</p>");
+        }
+      }
+
+    });
+
+
     dataLayer.addTo(self.lMap);
     self.overlays['layer'] = dataLayer;
     self.lMap.fitBounds(dataLayer.getBounds())
