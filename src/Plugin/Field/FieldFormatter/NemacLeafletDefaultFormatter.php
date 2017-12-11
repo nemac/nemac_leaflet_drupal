@@ -32,7 +32,7 @@ class NemacLeafletDefaultFormatter extends FormatterBase {
    */
   public static function defaultSettings() {
     return array(
-      'leaflet_map' => 'nemac_leaflet_map',
+      'nemac_leaflet_map' => 'nemac_leaflet_map',
       'height' => 400,
       'zoom' => 10,
       'minPossibleZoom' => 0,

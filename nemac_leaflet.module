@@ -91,6 +91,7 @@ function nemac_leaflet_nemac_leaflet_map_info() {
   return array(
     'Daveism MapBox' =>
       array(
+        'label' => 'nemac_leaflet_map',
         'settings' => array(
           'dragging' => TRUE,
           'touchZoom' => TRUE,
