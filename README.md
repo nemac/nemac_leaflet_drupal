@@ -35,3 +35,5 @@ It was based on the https://www.drupal.org/project/leaflet module.
 
 * to change the GeoJSON layer add the URL without the http: or https: in the text field
 ![change GeoJSON layer](screen/geojsonlayer.png)
+
+* to navigate to a node a field to the geojson named field_destination.  The value should be a relative path or full url.

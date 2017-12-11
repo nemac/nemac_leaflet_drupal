@@ -94,18 +94,30 @@
   };
 
   Drupal.nemac_leaflet.prototype.addDataToMap = function (data, self) {
-    console.log(data)
+
+    //add geojson layer defined in drupal field
     var dataLayer = L.geoJson(data, {
 
-      //add popup for feature
-      onEachFeature: function (feature, layer) {
-        if (feature.properties && feature.properties.field_destination && feature.properties.field_building_name) {
-          var PopupText = [];
-          PopupText.push("<b><br/>Building page </b> <a href=" + feature.properties.field_destination + '>' + feature.properties.field_building_name + '</a>');
-          layer.bindPopup("<p>" + PopupText.join("") + "</p>");
-        }
-      }
+      //un comment if you want popup navigation
+      // //add popup for feature
+      // onEachFeature: function (feature, layer) {
+      //   if (feature.properties && feature.properties.field_destination && feature.properties.field_building_name) {
+      //     var PopupText = [];
+      //     PopupText.push("<b><br/>Building page </b> <a href=" + feature.properties.field_destination + '>' + feature.properties.field_building_name + '</a>');
+      //     layer.bindPopup("<p>" + PopupText.join("") + "</p>");
+      //   }
+      // }
 
+    });
+
+    //on click naviations when field_destination is present
+    dataLayer.on("click", function (event) {
+        var clickevent = event.layer;
+
+        //only navigate when field_destination is present 
+        if (clickevent.feature.properties && clickevent.feature.properties.field_destination) {
+          window.location = clickevent.feature.properties.field_destination;
+       }
     });
 
 
