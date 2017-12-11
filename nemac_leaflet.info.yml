@@ -1,0 +1,5 @@
+name: NEMAC Leaflet
+type: module
+description: NEMAC's Drupal Integration for the Leaflet map library, originally from the leaflet drupal package.
+core: 8.x
+package: nemac_leaflet

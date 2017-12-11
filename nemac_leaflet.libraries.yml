@@ -1,0 +1,21 @@
+leaflet:
+  remote: http://leafletjs.com/
+  version: 1.2.0
+  license:
+    name: Leaflet-License
+    url: https://github.com/Leaflet/Leaflet/blob/v1.2.0/LICENSE
+    gpl-compatible: true
+  js:
+    //unpkg.com/leaflet@1.2.0/dist/leaflet.js: {}
+  css:
+    component:
+      //unpkg.com/leaflet@1.2.0/dist/leaflet.css: {}
+
+nemac_leaflet-drupal:
+    version: VERSION
+    js:
+      nemac_leaflet.drupal.js: {}
+    dependencies:
+      - leaflet/leaflet
+      - core/jquery
+      - core/drupal

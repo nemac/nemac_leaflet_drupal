@@ -1,0 +1,36 @@
+{
+  "name": "drupal/nemac_leaflet",
+  "description": "NEMAC's Drupal Integration for the Leaflet map library, originally from the leaflet drupal package.",
+  "type": "drupal-module",
+  "homepage": "",
+  "authors": [
+    {
+      "name": "Dave Michelson",
+      "homepage": "https://github.com/daveism",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/daveism",
+    "source": "https://github.com/daveism"
+  },
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "leaflet/leaflet",
+        "version": "v1.2.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/Leaflet/Leaflet/archive/v1.2.0.zip",
+          "type": "zip"
+        }
+      }
+    }
+  ],
+  "require": {
+    "leaflet/leaflet": "^1.2.0"
+  }
+}
