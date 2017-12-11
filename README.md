@@ -17,7 +17,7 @@ It was based on the https://www.drupal.org/project/leaflet module.
 * Unzip the file and copy the contents to .your Drupal 8 sites `/html/modules/contrib` directory.
 
 * Then install the module with Drupal's UI
-
+![insall module](screen/install.png)
 
 ### Using
 ---
