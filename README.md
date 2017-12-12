@@ -37,3 +37,15 @@ It was based on the https://www.drupal.org/project/leaflet module.
 ![change GeoJSON layer](screen/geojsonlayer.png)
 
 * to navigate to a node a field to the geojson named field_destination.  The value should be a relative path or full url.
+
+
+### Suggested modules
+
+I am also using these modules the views_geojson is very helpful for creating a GeoJSON feed of Spatial data held in a the geofield module.  A great tutorial on creating a geojsomn feed can be found here: https://savaslabs.com/2015/07/06/map-in-drupal-8.html#add-a-new-view.
+
+
+```
+RUN composer require 'drupal/geofield:^1.0'
+RUN composer require 'drupal/geophp:^1.0'
+RUN composer require 'drupal/views_geojson:1.x-dev'
+```
