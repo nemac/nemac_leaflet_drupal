@@ -41,11 +41,19 @@ It was based on the https://www.drupal.org/project/leaflet module.
 
 ### Suggested modules
 
-I am also using these modules the views_geojson is very helpful for creating a GeoJSON feed of Spatial data held in a the geofield module.  A great tutorial on creating a geojsomn feed can be found here: https://savaslabs.com/2015/07/06/map-in-drupal-8.html#add-a-new-view.
-
+I am also using these modules the views_geojson is very helpful for creating a GeoJSON feed of Spatial data held in a the geofield module.  A great tutorial on creating a geojson feed can be found here: https://savaslabs.com/2015/07/06/map-in-drupal-8.html#add-a-new-view.
 
 ```
-RUN composer require 'drupal/geofield:^1.0'
-RUN composer require 'drupal/geophp:^1.0'
-RUN composer require 'drupal/views_geojson:1.x-dev'
+composer require 'drupal/geofield:^1.0'
+composer require 'drupal/geophp:^1.0'
+composer require 'drupal/views_geojson:1.x-dev'
+composer require 'drupal/leaflet'
 ```
+
+Note: if an update was run from the Drupal UI it is possible a problem there was problem with the geophp module update.  You may have to remvove the directory and reload all the supporting modules:
+remove this directory
+```
+/html/vendor/phayes/geophp
+```
+
+from the Drupal install directory then rerun the composer require's.
