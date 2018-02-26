@@ -61,6 +61,7 @@
       this.lMap.fitWorld();
     }
 
+    this.lMap.scrollWheelZoom.disable();
     this.addDataToMap(data, self);
 
     // Add attribution
@@ -114,7 +115,7 @@
     dataLayer.on("click", function (event) {
         var clickevent = event.layer;
 
-        //only navigate when field_destination is present 
+        //only navigate when field_destination is present
         if (clickevent.feature.properties && clickevent.feature.properties.field_destination) {
           window.location = clickevent.feature.properties.field_destination;
        }
