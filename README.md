@@ -53,7 +53,7 @@ composer require 'drupal/leaflet'
 Note: if an update was run from the Drupal UI it is possible a problem there was problem with the geophp module update.  You may have to remvove the directory and reload all the supporting modules:
 remove this directory
 ```
-/html/vendor/phayes/geophp
+../html/vendor/phayes/geophp
 ```
 
 from the Drupal install directory then rerun the composer require's.
