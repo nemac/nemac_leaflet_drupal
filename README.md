@@ -57,3 +57,21 @@ remove this directory
 ```
 
 from the Drupal install directory then rerun the composer require's.
+
+
+NOTE as of begining of February if is this happens you MUST update the drupal/leaflet module to account for a new version of leaflet.
+This line.  Since then it apears this may have been upgraded so it may no longer be necessary.
+
+in the modules/contrib/leaflet directory
+
+change the following in leaflet.drupal.js
+
+```
+ L.MultiPolygon to L.Polygon
+```
+
+and
+
+```
+ L.MultiPolyline to L.Polyline
+```
