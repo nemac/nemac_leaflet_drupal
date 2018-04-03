@@ -12,7 +12,7 @@ It was based on the https://www.drupal.org/project/leaflet module.
 
 ### Installation
 ---
-* Download the code from GitHub https://github.com/nemac/nemac_leaflet_drupal/archive/master.zip.
+* Download the code from GitHub https://github.com/nemac/nemac_leaflet_drupal/blob/master/nemac_leaflet.tar.gz.
 
 * Unzip the file and copy the contents to .your Drupal 8 sites `/html/modules/contrib` directory.
 
